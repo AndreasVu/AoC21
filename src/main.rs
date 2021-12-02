@@ -1,4 +1,5 @@
 mod day1;
+mod day2;
 mod helper;
 
 fn main() {
@@ -6,4 +7,8 @@ fn main() {
 
     println!("Day 1 part 1 answer {}", day1::part1(&base_address));
     println!("Day 1 part 2 answer {}", day1::part2(&base_address));
+    println!("-------");
+
+    println!("Day 2 part 1 answer {}", day2::part1(&base_address));
+    println!("Day 2 part 2 answer {}", day2::part2(&base_address));
 }
