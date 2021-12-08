@@ -5,14 +5,25 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(Windows) Launch",
-            "type": "cppvsdbg",
+            "type": "lldb",
             "request": "launch",
-            "program": "${workspaceRoot}/target/debug/AoC21.exe",
+            "name": "Debug executable 'AoC21'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=AoC21",
+                    "--package=AoC21"
+                ],
+                "filter": {
+                    "name": "AoC21",
+                    "kind": "bin"
+                }
+            },
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceRoot}",
-            "environment": [],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "RUST_BACKTRACE": "1"
+            }
         },
     ]
 }
